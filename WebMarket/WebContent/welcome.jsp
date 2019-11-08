@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%@ include file="menu.jsp"%>
-	<%!String greeting = "웹 쇼필몰에 오신 것을 환영합니다";
+	<%!String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
 	String tagline = "Welcome to Web Market!";%>
 	<div class="jumbotron">
 		<div class="container">
@@ -42,17 +42,15 @@
 			%>
 		</div>
 		<hr>
+		<h1>
+			<%=greeting%>
+		</h1>
+		<h3>
+			<%=tagline%>
+		</h3>
 	</div>
 	</main>
-	<h1>
-		<%=greeting%>
-	</h1>
-	<h3>
-		<%=tagline%>
-	</h3>
-	<footer class="container">
-		<p>&copy; Webmarket</p>
-	</footer>
+
 	<%@ include file="footer.jsp"%>
 </body>
 </html>

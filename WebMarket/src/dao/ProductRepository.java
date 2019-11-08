@@ -2,8 +2,6 @@ package dao;
 
 import java.util.ArrayList;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 import dto.Product;
 
 public class ProductRepository {
@@ -18,29 +16,30 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
+		phone.setFilename("P1234.png");
 		
 		Product notebook = new Product("P1235", "LG PC ±×·¥", 1500000);
-		phone.setDescription("13.3-inch, IPS LED display, 5rd Generation Intel Core processors");
-		phone.setCategory("Notebook");
-		phone.setManufacturer("LG");
-		phone.setUnitsInStock(1000);
-		phone.setCondition("Refurbished");
+		notebook.setDescription("13.3-inch, IPS LED display, 5rd Generation Intel Core processors");
+		notebook.setCategory("Notebook");
+		notebook.setManufacturer("LG");
+		notebook.setUnitsInStock(1000);
+		notebook.setCondition("Refurbished");
+		notebook.setFilename("P1235.png");;
 		
 		Product tablet = new Product("P1234", "iPhone 6s", 900000);
-		phone.setDescription("212.8*125.6*6.6mm, Super AMOLED display, 0cta-Core processor");
-		phone.setCategory("Tablet");
-		phone.setManufacturer("Samsung");
-		phone.setUnitsInStock(1000);
-		phone.setCondition("tablet");
+		tablet.setDescription("212.8*125.6*6.6mm, Super AMOLED display, 0cta-Core processor");
+		tablet.setCategory("Tablet");
+		tablet.setManufacturer("Samsung");
+		tablet.setUnitsInStock(1000);
+		tablet.setCondition("tablet");
+		tablet.setFilename("P1236.png");
 		
 		listOfProducts.add(phone);
 		listOfProducts.add(notebook);
 		listOfProducts.add(tablet);
 		
 	}
-	public static void setInstance(ProductRepository instance) {
-		ProductRepository.instance = instance;
-	}
+
 	public static ProductRepository getInstance(){
 		return instance;
 	}
